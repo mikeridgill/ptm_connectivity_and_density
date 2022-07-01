@@ -10,6 +10,7 @@
 3.  [Running on SCW](#org4052c97)
     1.  [Slurm input files](#org48ecd67)
     2.  [Slurm output files](#orgb3d899c)
+    3.  [Install on SCW](#orgb4d539c)
 
 
 
@@ -22,7 +23,7 @@ The contents of this repository have been written to work with specific outputs 
 This README file describes the use of the following Python programmes:
 
 1.  plot_connectivity.py
-2.  plot<sub>density.py</sub>
+2.  plot_density.py
 
 As their names suggest, these programmes aim to determine and represent the connectivity between different release sites and the density of particle counts, using the output from a PTM. Connectivity is a count of the number of released particles, from one release site, that spend any amount of time in the area of another release site, during the period of interest. The density of particle counts is a measure of how many particles spend any amount of time in a grid cell, within a spatial domain, of a specified spatial resolution, during the period of interest. In each case, these measurements of connectivity and density can be considered either per release site, or all together.
 
@@ -30,6 +31,7 @@ Given the large size of this output, these Python programmes are accompanied wit
 
 
 <a id="org2d719f7"></a>
+
 
 # Accompanying input files
 
@@ -63,37 +65,37 @@ An example of the parameters file, called parameters.mat, is included in the dir
 
 <tbody>
 <tr>
-<td class="org-left">ptm<sub>output</sub><sub>file</sub></td>
+<td class="org-left">ptm_output_file</td>
 <td class="org-left">String with path to the output from PTM.</td>
 </tr>
 
 
 <tr>
-<td class="org-left">release<sub>sites</sub><sub>file</sub></td>
+<td class="org-left">release_sites_file</td>
 <td class="org-left">String with path to the information describing release sites.</td>
 </tr>
 
 
 <tr>
-<td class="org-left">days<sub>indices</sub></td>
+<td class="org-left">days_indices</td>
 <td class="org-left">An array of the indices of interest for dimension 2 of latsave/lonsave.</td>
 </tr>
 
 
 <tr>
-<td class="org-left">months<sub>indices</sub></td>
+<td class="org-left">months_indices</td>
 <td class="org-left">An array of the indices of interest for dimension 3 of latsave/lonsave.</td>
 </tr>
 
 
 <tr>
-<td class="org-left">time<sub>indices</sub></td>
+<td class="org-left">time_indices</td>
 <td class="org-left">An array of the indices of interest for dimension 4 of latsave/lonsave.</td>
 </tr>
 
 
 <tr>
-<td class="org-left">shape<sub>check</sub></td>
+<td class="org-left">shape_check</td>
 <td class="org-left">An array confirming the shape of the 4 dimensions of latsave/lonsave.</td>
 </tr>
 
@@ -105,26 +107,26 @@ An example of the parameters file, called parameters.mat, is included in the dir
 
 
 <tr>
-<td class="org-left">fig<sub>lims</sub></td>
+<td class="org-left">fig_lims</td>
 <td class="org-left">Lats and lons for cropping figures [x<sub>left</sub>, x<sub>right</sub>, y<sub>down</sub>, y<sub>up</sub>].</td>
 </tr>
 
 
 <tr>
-<td class="org-left">keep<sub>polygon</sub><sub>mats</sub></td>
+<td class="org-left">keep_polygon_mats</td>
 <td class="org-left">1 to keep the release site-specific matrices/plots. 0 to not keep.</td>
 </tr>
 
 
 <tr>
-<td class="org-left">keep<sub>polygon</sub><sub>shapefiles</sub></td>
+<td class="org-left">keep_polygon_shapefiles</td>
 <td class="org-left">1 to keep the release site-specific shapefiles. 0 to not keep.</td>
 </tr>
 
 
 <tr>
 <td class="org-left">increments</td>
-<td class="org-left">Resolution for density plots. Number of cells in x and y direction.</td>
+<td class="org-left">Resolution for density plots. Number of cells in $x$ and $y$ direction.</td>
 </tr>
 </tbody>
 </table>
@@ -138,28 +140,28 @@ The matrices latsave and lonsave are in the output from the PTM. They have 4 dim
 
 [no. of particles x no. of release days x no. of release months x no. of units of time]
 
-The parameters days<sub>indices</sub>, months<sub>indices</sub> and time<sub>indices</sub> include the indices of latsave/lonsave that are of interest and are used to 'slice' these matrices.
+The parameters days_indices, months_indices and time_indices include the indices of latsave/lonsave that are of interest and are used to 'slice' these matrices.
 
 
 <a id="org0b70a20"></a>
 
 ## Specifying the shape of latsave/lonsave
 
-The parameter shape<sub>check</sub> should express the dimensions, as described above, and is required by the Python programmes to aid reading the MATLAB .mat files. The Python package used to achieve this can 'flatten' matrices and this avoids any unwanted problems.
+The parameter shape_check should express the dimensions, as described above, and is required by the Python programmes to aid reading the MATLAB .mat files. The Python package used to achieve this can 'flatten' matrices and this avoids any unwanted problems.
 
 
 <a id="org2157bd8"></a>
 
 ## Python and MATLAB indexing
 
-A difference between MATLAB and Python is that the former uses indices that start from 1, whereas the latter starts from 0. This can cause problems. For the parameters days<sub>indices</sub>, months<sub>indices</sub> and time<sub>indices</sub> use the MATLAB method of indexing (starting from 1). The Python programmes will convert these to Python appropriate indexing.
+A difference between MATLAB and Python is that the former uses indices that start from 1, whereas the latter starts from 0. This can cause problems. For the parameters days_indices, months_indices and time_indices use the MATLAB method of indexing (starting from 1). The Python programmes will convert these to Python appropriate indexing.
 
 
 <a id="org637d97a"></a>
 
 ## Choosing whether to save release site-specific information
 
-If both keep<sub>polygon</sub><sub>mats</sub> and keep<sub>polygon</sub><sub>shapefiles</sub> are set to 0, the directories created for each release site, which will contain the shapefiles created during running, will be deleted. If either, or both, are set to 1, they will be left in place to hold what you have specified retaining. 
+If both keep_polygon_mats and keep_polygon_shapefiles are set to 0, the directories created for each release site, which will contain the shapefiles created during running, will be deleted. If either, or both, are set to 1, they will be left in place to hold what you have specified retaining. 
 
 
 <a id="org4052c97"></a>
@@ -227,3 +229,10 @@ At the bottom of the file is the command to run the Python programme, with the f
 
 For each run, two output files are created and can be found in the directory called slurm<sub>output</sub>. One contains any output from the programme (print commands) and the other holds any error messages.
 
+
+<a id="orgb4d539c"></a>
+
+## Install on SCW
+Install these files on SCW using:
+
+    git clone https://github.com/mikeridgill/ptm_connectivity_and_density.git
