@@ -21,7 +21,7 @@ The contents of this repository have been written to work with specific outputs 
 
 This README file describes the use of the following Python programmes:
 
-1.  plot<sub>connectivity.py</sub>
+1.  plot_connectivity.py
 2.  plot<sub>density.py</sub>
 
 As their names suggest, these programmes aim to determine and represent the connectivity between different release sites and the density of particle counts, using the output from a PTM. Connectivity is a count of the number of released particles, from one release site, that spend any amount of time in the area of another release site, during the period of interest. The density of particle counts is a measure of how many particles spend any amount of time in a grid cell, within a spatial domain, of a specified spatial resolution, during the period of interest. In each case, these measurements of connectivity and density can be considered either per release site, or all together.
