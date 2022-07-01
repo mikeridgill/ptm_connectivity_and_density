@@ -27,7 +27,7 @@ This README file describes the use of the following Python programmes:
 
 As their names suggest, these programmes aim to determine and represent the connectivity between different release sites and the density of particle counts, using the output from a PTM. Connectivity is a count of the number of released particles, from one release site, that spend any amount of time in the area of another release site, during the period of interest. The density of particle counts is a measure of how many particles spend any amount of time in a grid cell, within a spatial domain, of a specified spatial resolution, during the period of interest. In each case, these measurements of connectivity and density can be considered either per release site, or all together.
 
-Given the large size of this output, these Python programmes are accompanied with slurm files to aid running them on high-performance computation hardware, like Supercomputing Wales (SCW).
+Given the large size of this output, these Python programmes are accompanied with slurm files to aid running them on high-performance computation hardware, like [Supercomputing Wales](https://www.supercomputing.wales/) (SCW).
 
 
 <a id="org2d719f7"></a>
@@ -108,7 +108,7 @@ An example of the parameters file, called parameters.mat, is included in the dir
 
 <tr>
 <td class="org-left">fig_lims</td>
-<td class="org-left">Lats and lons for cropping figures [x<sub>left</sub>, x<sub>right</sub>, y<sub>down</sub>, y<sub>up</sub>].</td>
+<td class="org-left">Lats and lons for cropping figures [x_left, x_right, y_down, y_up].</td>
 </tr>
 
 
