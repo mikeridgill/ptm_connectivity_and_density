@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=8
 ##SBATCH --partition=dev
 #SBATCH --mem=250G
-#SBATCH --time=22:00:00
+#SBATCH --time=45:00:00
 
 module purge
 module load python/3.7.0
