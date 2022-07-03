@@ -249,7 +249,7 @@ for i in range(ns):
 # Plot connectivity
 fig2 = plt.figure()
 ax2 = fig2.add_subplot(111)
-plt.imshow(np.flipud(connectivity_mat), extent=[0.5, ns+0.5, 0.5, nss+0.5], norm=colors.LogNorm())
+plt.imshow(np.flipud(connectivity_mat), extent=[0.5, ns+0.5, 0.5, ns+0.5], norm=colors.LogNorm())
 plt.colorbar(label='Particle count')
 plt.xlabel('Destination sites')
 plt.ylabel('Origin sites')
