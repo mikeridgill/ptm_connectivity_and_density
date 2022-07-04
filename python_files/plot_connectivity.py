@@ -295,6 +295,5 @@ if (keep_polygon_mats == 0) & (keep_polygon_shapefiles == 0):
 # Complete script and output duration data
 print('Completed at: ', datetime.now().strftime('%Y-%m-%d_%H:%M:%S'))
 seconds_period = time.time()-start
-print('Finished in: {:.2f}s'.format(time.time()-start))
 print('Finished in: {:.2f}s'.format(seconds_period))
 print('In H:MM:SS.SSSSSS format: ', str(timedelta(seconds=seconds_period)))
