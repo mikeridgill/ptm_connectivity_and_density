@@ -1,0 +1,1 @@
+This directory is where the slurm output files from the programmes are saved.

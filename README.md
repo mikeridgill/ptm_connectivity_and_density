@@ -39,10 +39,9 @@ Each programme requires 3 accompanying MATLAB .mat files:
 
 1.  output from the PTM;
 2.  information describing the release sites; and,
-3.  parameters describing how this programme will run and determine desired output.
+3.  parameters describing how this programme will run and determine desired output (see [./input_files/parameters.mat](parameters.mat)). 
 
-The programmes will read these accompanying files when running. The paths to the first two files in the list should be included within the third file in the list, which is included as an argument when running this
-programme. For example:
+The programmes will read these accompanying files when running. The paths to the first two files in the list should be included within the third file in the list (open [./input_files/parameters.mat](parameters.mat) in MATLAB to see this), which is included as an argument when running this programme. For example:
 
     python plot_connectivity.py parameters.mat
 
@@ -172,7 +171,7 @@ A slurm file is required to run a programme on SCW. There are examples of these 
 
     sbatch run_plot_connectivity.slurm
 
-It then enters a queue, until the requested resources are available to run the programme. To see if it is running, type
+Your programme then enters a queue, until the requested resources are available to run it. To see if it is running, type
 
     squeue -u [your user id]
 
