@@ -46,7 +46,7 @@ programme. For example:
 
     python plot_connectivity.py parameters.mat
 
-An example of the parameters file, called parameters.mat, is included in the directory input<sub>files</sub>, which can be used as a template to create a file that suits your requirements, using MATLAB. The table below summarises what is in this file.
+An example of the parameters file, called parameters.mat, is included in the directory input_files, which can be used as a template to create a file that suits your requirements, using MATLAB. The table below summarises what is in this file.
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -181,7 +181,7 @@ It then enters a queue, until the requested resources are available to run the p
 
 ## Slurm input files
 
-Slurm files are included, which can be used to run the python programmes. The table below summarises relevant parameters that can be edited. Tweaking these parameters is a balancing act of optimising the performance of your programme and not getting stuck in the queue waiting for resources to be come available.
+Slurm files are included, which can be used to run the python programmes. There are examples of these files in the directory [slurm_run](./slurm_run). The table below summarises relevant parameters that can be edited. Tweaking these parameters is a balancing act of optimising the performance of your programme and not getting stuck in the queue waiting for resources to be come available.
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -227,7 +227,7 @@ At the bottom of the file is the command to run the Python programme, with the f
 
 ## Slurm output files
 
-For each run, two output files are created and can be found in the directory called slurm<sub>output</sub>. One contains any output from the programme (print commands) and the other holds any error messages.
+For each run, two output files are created and can be found in the directory called slurm_output. One contains any output from the programme (print commands) and the other holds any error messages.
 
 
 <a id="orgb4d539c"></a>
