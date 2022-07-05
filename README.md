@@ -168,7 +168,7 @@ If both keep_polygon_mats and keep_polygon_shapefiles are set to 0, the director
 
 # Running on SCW
 
-A slurm file is required to run a programme on SCW. It is run using a command like
+A slurm file is required to run a programme on SCW. There are examples of these files in the directory [slurm_run](./slurm_run). These files are run using the command
 
     sbatch run_plot_connectivity.slurm
 
@@ -181,7 +181,7 @@ It then enters a queue, until the requested resources are available to run the p
 
 ## Slurm input files
 
-Slurm files are included, which can be used to run the python programmes. There are examples of these files in the directory [slurm_run](./slurm_run). The table below summarises relevant parameters that can be edited. Tweaking these parameters is a balancing act of optimising the performance of your programme and not getting stuck in the queue waiting for resources to be come available.
+Slurm files are included, which can be used to run the python programmes. The table below summarises relevant parameters that can be edited. Tweaking these parameters is a balancing act of optimising the performance of your programme and not getting stuck in the queue waiting for resources to be come available.
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
