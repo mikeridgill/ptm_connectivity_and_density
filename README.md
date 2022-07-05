@@ -39,9 +39,9 @@ Each programme requires 3 accompanying MATLAB .mat files:
 
 1.  output from the PTM;
 2.  information describing the release sites; and,
-3.  parameters describing how this programme will run and determine desired output (see [./input_files/parameters.mat](parameters.mat)). 
+3.  parameters describing how this programme will run and determine desired output (see [parameters.mat](./input_files/parameters.mat)). 
 
-The programmes will read these accompanying files when running. The paths to the first two files in the list should be included within the third file in the list (open [./input_files/parameters.mat](parameters.mat) in MATLAB to see this), which is included as an argument when running this programme. For example:
+The programmes will read these accompanying files when running. The paths to the first two files in the list should be included within the third file in the list (open [parameters.mat](./input_files/parameters.mat) in MATLAB to see this), which is included as an argument when running this programme. For example:
 
     python plot_connectivity.py parameters.mat
 
